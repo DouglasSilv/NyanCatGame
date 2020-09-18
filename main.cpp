@@ -1,4 +1,5 @@
 
+
 /*******************************************************************
 ** This code is part of Breakout.
 **
@@ -23,7 +24,7 @@ const GLuint SCREEN_WIDTH = 1280;
 // The height of the screen
 const GLuint SCREEN_HEIGHT = 720;
 
-Game SpaceRun(SCREEN_WIDTH, SCREEN_HEIGHT);
+Game Breakout(SCREEN_WIDTH, SCREEN_HEIGHT);
 
 int main(int argc, char* argv[])
 {
@@ -33,7 +34,7 @@ int main(int argc, char* argv[])
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);*/
 
-	GLFWwindow* window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Space Run", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "NyanCat Game", nullptr, nullptr);
 	glfwMakeContextCurrent(window);
 
 	glewInit();
@@ -49,14 +50,14 @@ int main(int argc, char* argv[])
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	// Initialize game
-	SpaceRun.Init();
+	Breakout.Init();
 
 	// DeltaTime variables
 	GLfloat deltaTime = 0.0f;
 	GLfloat lastFrame = 0.0f;
 
 	// Start Game within Menu State
-	SpaceRun.State = GAME_ACTIVE;
+	Breakout.State = GAME_ACTIVE;
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -68,15 +69,15 @@ int main(int argc, char* argv[])
 
 		//deltaTime = 0.001f;
 		// Manage user input
-		SpaceRun.ProcessInput(deltaTime);
+		Breakout.ProcessInput(deltaTime);
 
 		// Update Game state
-		SpaceRun.Update(deltaTime);
+		Breakout.Update(deltaTime);
 
 		// Render
-		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+		glClearColor(1.0f, 1.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
-		SpaceRun.Render();
+		Breakout.Render();
 
 		glfwSwapBuffers(window);
 	}
@@ -96,9 +97,9 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 	if (key >= 0 && key < 1024)
 	{
 		if (action == GLFW_PRESS)
-			SpaceRun.Keys[key] = GL_TRUE;
+			Breakout.Keys[key] = GL_TRUE;
 		else if (action == GLFW_RELEASE)
-			SpaceRun.Keys[key] = GL_FALSE;
+			Breakout.Keys[key] = GL_FALSE;
 	}
 }
 

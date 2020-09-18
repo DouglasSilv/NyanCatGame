@@ -47,7 +47,7 @@ rule CXX_EXECUTABLE_LINKER__EarthDefense_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\dev\EarthDefense -B"D:\dev\EarthDefense\out\build\x64-Debug (padrão)"
+  command = "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\dev\NyanCatGame -B"D:\dev\NyanCatGame\out\build\x64-Debug (padrão)"
   description = Re-running CMake...
   generator = 1
 

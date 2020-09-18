@@ -21,7 +21,7 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
 
-The C compiler identification is MSVC, found in "D:/dev/EarthDefense/out/build/x64-Debug (padrão)/CMakeFiles/3.17.20032601-MSVC_2/CompilerIdC/CMakeCCompilerId.exe"
+The C compiler identification is MSVC, found in "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/CMakeFiles/3.17.20032601-MSVC_2/CompilerIdC/CMakeCCompilerId.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: D:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/bin/HostX64/x64/cl.exe 
@@ -45,39 +45,39 @@ Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" p
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
 
-The CXX compiler identification is MSVC, found in "D:/dev/EarthDefense/out/build/x64-Debug (padrão)/CMakeFiles/3.17.20032601-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.exe"
+The CXX compiler identification is MSVC, found in "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/CMakeFiles/3.17.20032601-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.exe"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: D:/dev/EarthDefense/out/build/x64-Debug (padrão)/CMakeFiles/CMakeTmp
+Change Dir: D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/CMakeFiles/CMakeTmp
 
-Run Build Command(s):D:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_0d33a && [1/2] Building C object CMakeFiles\cmTC_0d33a.dir\testCCompiler.c.obj
-[2/2] Linking C executable cmTC_0d33a.exe
+Run Build Command(s):D:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_fcaae && [1/2] Building C object CMakeFiles\cmTC_fcaae.dir\testCCompiler.c.obj
+[2/2] Linking C executable cmTC_fcaae.exe
 
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: D:/dev/EarthDefense/out/build/x64-Debug (padrão)/CMakeFiles/CMakeTmp
+Change Dir: D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/CMakeFiles/CMakeTmp
 
-Run Build Command(s):D:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_d1e35 && [1/2] Building C object CMakeFiles\cmTC_d1e35.dir\CMakeCCompilerABI.c.obj
+Run Build Command(s):D:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_3b2bc && [1/2] Building C object CMakeFiles\cmTC_3b2bc.dir\CMakeCCompilerABI.c.obj
 Observação: incluindo arquivo: D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeCompilerABI.h
-[2/2] Linking C executable cmTC_d1e35.exe
+[2/2] Linking C executable cmTC_3b2bc.exe
 
 
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: D:/dev/EarthDefense/out/build/x64-Debug (padrão)/CMakeFiles/CMakeTmp
+Change Dir: D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/CMakeFiles/CMakeTmp
 
-Run Build Command(s):D:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_036d3 && [1/2] Building CXX object CMakeFiles\cmTC_036d3.dir\testCXXCompiler.cxx.obj
-[2/2] Linking CXX executable cmTC_036d3.exe
+Run Build Command(s):D:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_de7f5 && [1/2] Building CXX object CMakeFiles\cmTC_de7f5.dir\testCXXCompiler.cxx.obj
+[2/2] Linking CXX executable cmTC_de7f5.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: D:/dev/EarthDefense/out/build/x64-Debug (padrão)/CMakeFiles/CMakeTmp
+Change Dir: D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/CMakeFiles/CMakeTmp
 
-Run Build Command(s):D:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_5576a && [1/2] Building CXX object CMakeFiles\cmTC_5576a.dir\CMakeCXXCompilerABI.cpp.obj
+Run Build Command(s):D:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_2d124 && [1/2] Building CXX object CMakeFiles\cmTC_2d124.dir\CMakeCXXCompilerABI.cpp.obj
 Observação: incluindo arquivo: D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.17\Modules\CMakeCompilerABI.h
-[2/2] Linking CXX executable cmTC_5576a.exe
+[2/2] Linking CXX executable cmTC_2d124.exe
 
 
 

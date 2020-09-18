@@ -102,6 +102,7 @@ Texture2D ResourceManager::loadTextureFromFile(const GLchar* file, GLboolean alp
 {
 	// Create Texture object
 	Texture2D texture;
+
 	if (alpha)
 	{
 		texture.Internal_Format = GL_RGBA;
@@ -109,7 +110,7 @@ Texture2D ResourceManager::loadTextureFromFile(const GLchar* file, GLboolean alp
 	}
 	// Load image
 	int width, height, numberOfComponents;
-	unsigned char* image = stbi_load(file, &width, &height, &numberOfComponents, 3);
+	unsigned char* image = stbi_load(file, &width, &height, &numberOfComponents, texture.Image_Format == GL_RGBA ? 4 : 3);
 	// Now generate texture
 	texture.Generate(width, height, image);
 	// And finally free image data

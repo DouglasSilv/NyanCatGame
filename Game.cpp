@@ -32,10 +32,19 @@ Game::~Game()
 
 void Game::Init()
 {
-	ResourceManager::LoadTexture("textures/Background.jpg", GL_TRUE, "background");
+	ResourceManager::LoadShader("shaders/sprite.vs", "shaders/sprite.frag", nullptr, "sprite");
 
-	glm::vec2 background1Pos = glm::vec2(0, 0);
-	Background = new BackgroundObject(background1Pos, glm::vec2(1280, this->Height), ResourceManager::GetTexture("background"));
+	glm::mat4 projection = glm::ortho(0.0f, static_cast<GLfloat>(this->Width), static_cast<GLfloat>(this->Height), 0.0f, -1.0f, 1.0f);
+	ResourceManager::GetShader("sprite").Use().SetInteger("sprite", 0);
+	ResourceManager::GetShader("sprite").SetMatrix4("projection", projection);
+
+	ResourceManager::LoadTexture("textures/background.jpg", GL_FALSE, "background");
+
+	Shader shader = ResourceManager::GetShader("sprite");
+	Renderer = new SpriteRenderer(shader);
+
+	glm::vec2 backgroundPosition = glm::vec2(0, 0);
+	Background = new BackgroundObject(backgroundPosition, glm::vec2(1280, this->Height), ResourceManager::GetTexture("background"));
 }
 
 void Game::Update(GLfloat dt)

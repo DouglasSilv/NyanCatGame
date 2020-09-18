@@ -1,8 +1,8 @@
-# Install script for directory: D:/dev/EarthDefense
+# Install script for directory: D:/dev/NyanCatGame
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/dev/EarthDefense/out/install/x64-Debug (padrão)")
+  set(CMAKE_INSTALL_PREFIX "D:/dev/NyanCatGame/out/install/x64-Debug (padrão)")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/dev/EarthDefense/out/build/x64-Debug (padrão)/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

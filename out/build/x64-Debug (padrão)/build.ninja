@@ -39,7 +39,7 @@ include rules.ninja
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "D:\dev\EarthDefense\out\build\x64-Debug (padrão)" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\dev\EarthDefense -B"D:\dev\EarthDefense\out\build\x64-Debug (padrão)""
+  COMMAND = cmd.exe /C "cd /D "D:\dev\NyanCatGame\out\build\x64-Debug (padrão)" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\dev\NyanCatGame -B"D:\dev\NyanCatGame\out\build\x64-Debug (padrão)""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -131,9 +131,9 @@ build EarthDefense.exe: CXX_EXECUTABLE_LINKER__EarthDefense_Debug CMakeFiles\Ear
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = glfw3.lib  glew32.lib  opengl32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  LINK_PATH = -LIBPATH:D:\dev\EarthDefense\deps\glfw\lib-vc2019   -LIBPATH:D:\dev\EarthDefense\deps\glew\lib\Release\x64
+  LINK_PATH = -LIBPATH:D:\dev\NyanCatGame\deps\glfw\lib-vc2019   -LIBPATH:D:\dev\NyanCatGame\deps\glew\lib\Release\x64
   OBJECT_DIR = CMakeFiles\EarthDefense.dir
-  POST_BUILD = cmd.exe /C "cd /D "D:\dev\EarthDefense\out\build\x64-Debug (padrão)" && powershell -noprofile -executionpolicy Bypass -file D:/dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "D:/dev/EarthDefense/out/build/x64-Debug (padrão)/EarthDefense.exe" -installedDir D:/dev/vcpkg/installed/x64-windows/debug/bin -OutVariable out && cd /D "D:\dev\EarthDefense\out\build\x64-Debug (padrão)" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/dev/EarthDefense/deps/glew/bin/Release/x64/glew32.dll "D:/dev/EarthDefense/out/build/x64-Debug (padrão)/glew32.dll""
+  POST_BUILD = cmd.exe /C "cd /D "D:\dev\NyanCatGame\out\build\x64-Debug (padrão)" && powershell -noprofile -executionpolicy Bypass -file D:/dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/EarthDefense.exe" -installedDir D:/dev/vcpkg/installed/x64-windows/debug/bin -OutVariable out && cd /D "D:\dev\NyanCatGame\out\build\x64-Debug (padrão)" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/dev/NyanCatGame/deps/glew/bin/Release/x64/glew32.dll "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/glew32.dll" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E create_symlink D:/dev/NyanCatGame/shaders "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/shaders" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E create_symlink D:/dev/NyanCatGame/textures "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/textures""
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
   TARGET_FILE = EarthDefense.exe
@@ -145,7 +145,7 @@ build EarthDefense.exe: CXX_EXECUTABLE_LINKER__EarthDefense_Debug CMakeFiles\Ear
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "D:\dev\EarthDefense\out\build\x64-Debug (padrão)" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "D:\dev\NyanCatGame\out\build\x64-Debug (padrão)" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -162,7 +162,7 @@ build EarthDefense: phony EarthDefense.exe
 # =============================================================================
 
 #############################################
-# Folder: D:/dev/EarthDefense/out/build/x64-Debug (padrão)
+# Folder: D:/dev/NyanCatGame/out/build/x64-Debug (padrão)
 
 build all: phony EarthDefense.exe
 

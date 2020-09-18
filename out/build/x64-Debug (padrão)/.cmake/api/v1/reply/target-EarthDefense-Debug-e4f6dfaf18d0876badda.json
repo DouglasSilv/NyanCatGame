@@ -74,19 +74,19 @@
 			[
 				{
 					"backtrace" : 5,
-					"path" : "D:/dev/EarthDefense/deps/glm"
+					"path" : "D:/dev/NyanCatGame/deps/glm"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/dev/EarthDefense/deps/stb"
+					"path" : "D:/dev/NyanCatGame/deps/stb"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/dev/EarthDefense/deps/glfw/include"
+					"path" : "D:/dev/NyanCatGame/deps/glfw/include"
 				},
 				{
 					"backtrace" : 5,
-					"path" : "D:/dev/EarthDefense/deps/glew/include"
+					"path" : "D:/dev/NyanCatGame/deps/glew/include"
 				}
 			],
 			"language" : "CXX",
@@ -118,12 +118,12 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "-LIBPATH:D:\\dev\\EarthDefense\\deps\\glfw\\lib-vc2019",
+				"fragment" : "-LIBPATH:D:\\dev\\NyanCatGame\\deps\\glfw\\lib-vc2019",
 				"role" : "libraryPath"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "-LIBPATH:D:\\dev\\EarthDefense\\deps\\glew\\lib\\Release\\x64",
+				"fragment" : "-LIBPATH:D:\\dev\\NyanCatGame\\deps\\glew\\lib\\Release\\x64",
 				"role" : "libraryPath"
 			},
 			{
