@@ -11,12 +11,15 @@
 #include "SpriteRenderer.h"
 #include "GameObject.h"
 #include "BackgroundObject.h"
+#include "PlayerObject.h"
 
 // Game-related State data
 SpriteRenderer* Renderer;
 SpriteRenderer* RendererPlayer;
 
 BackgroundObject* Background;
+
+PlayerObject* Player;
 
 
 Game::Game(GLuint width, GLuint height)
@@ -28,6 +31,7 @@ Game::Game(GLuint width, GLuint height)
 Game::~Game()
 {
 	delete Renderer;
+	delete Player;
 }
 
 void Game::Init()
@@ -40,11 +44,16 @@ void Game::Init()
 
 	ResourceManager::LoadTexture("textures/background.jpg", GL_FALSE, "background");
 
+	ResourceManager::LoadTexture("textures/nyancat.png", GL_TRUE, "nyancat");
+
 	Shader shader = ResourceManager::GetShader("sprite");
 	Renderer = new SpriteRenderer(shader);
 
 	glm::vec2 backgroundPosition = glm::vec2(0, 0);
 	Background = new BackgroundObject(backgroundPosition, glm::vec2(1280, this->Height), ResourceManager::GetTexture("background"));
+
+	glm::vec2 playerPosition = glm::vec2(200, 300);
+	Player = new PlayerObject(playerPosition, ResourceManager::GetTexture("nyancat"));
 }
 
 void Game::Update(GLfloat dt)
@@ -62,7 +71,12 @@ void Game::ProcessInput(GLfloat dt)
 
 void Game::Render()
 {
+	Shader shader = ResourceManager::GetShader("sprite");
+	RendererPlayer = new SpriteRenderer(shader, 0.0f, 0.2f);
+
 	Background->Draw(*Renderer, 0.1f);
+
+	Player->Draw(*RendererPlayer, 0.2f);
 }
 
 

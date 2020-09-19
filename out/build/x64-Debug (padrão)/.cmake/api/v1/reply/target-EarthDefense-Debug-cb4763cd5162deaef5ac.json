@@ -99,7 +99,8 @@
 				8,
 				11,
 				13,
-				14
+				14,
+				15
 			]
 		}
 	],
@@ -168,7 +169,8 @@
 				8,
 				11,
 				13,
-				14
+				14,
+				15
 			]
 		},
 		{
@@ -181,7 +183,8 @@
 				7,
 				9,
 				10,
-				12
+				12,
+				16
 			]
 		}
 	],
@@ -269,6 +272,17 @@
 			"compileGroupIndex" : 0,
 			"path" : "Game.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "PlayerObject.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "PlayerObject.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"
