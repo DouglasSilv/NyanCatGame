@@ -127,6 +127,14 @@ build CMakeFiles\EarthDefense.dir\PlayerObject.cpp.obj: CXX_COMPILER__EarthDefen
   TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
   TARGET_PDB = EarthDefense.pdb
 
+build CMakeFiles\EarthDefense.dir\EnemyObject.cpp.obj: CXX_COMPILER__EarthDefense_Debug ..\..\..\EnemyObject.cpp || cmake_object_order_depends_target_EarthDefense_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
+  OBJECT_DIR = CMakeFiles\EarthDefense.dir
+  OBJECT_FILE_DIR = CMakeFiles\EarthDefense.dir
+  TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
+  TARGET_PDB = EarthDefense.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target EarthDefense
@@ -135,7 +143,7 @@ build CMakeFiles\EarthDefense.dir\PlayerObject.cpp.obj: CXX_COMPILER__EarthDefen
 #############################################
 # Link the executable EarthDefense.exe
 
-build EarthDefense.exe: CXX_EXECUTABLE_LINKER__EarthDefense_Debug CMakeFiles\EarthDefense.dir\main.cpp.obj CMakeFiles\EarthDefense.dir\ResourceManager.cpp.obj CMakeFiles\EarthDefense.dir\Texture2D.cpp.obj CMakeFiles\EarthDefense.dir\Shader.cpp.obj CMakeFiles\EarthDefense.dir\BackgroundObject.cpp.obj CMakeFiles\EarthDefense.dir\GameObject.cpp.obj CMakeFiles\EarthDefense.dir\SpriteRenderer.cpp.obj CMakeFiles\EarthDefense.dir\Game.cpp.obj CMakeFiles\EarthDefense.dir\PlayerObject.cpp.obj
+build EarthDefense.exe: CXX_EXECUTABLE_LINKER__EarthDefense_Debug CMakeFiles\EarthDefense.dir\main.cpp.obj CMakeFiles\EarthDefense.dir\ResourceManager.cpp.obj CMakeFiles\EarthDefense.dir\Texture2D.cpp.obj CMakeFiles\EarthDefense.dir\Shader.cpp.obj CMakeFiles\EarthDefense.dir\BackgroundObject.cpp.obj CMakeFiles\EarthDefense.dir\GameObject.cpp.obj CMakeFiles\EarthDefense.dir\SpriteRenderer.cpp.obj CMakeFiles\EarthDefense.dir\Game.cpp.obj CMakeFiles\EarthDefense.dir\PlayerObject.cpp.obj CMakeFiles\EarthDefense.dir\EnemyObject.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = glfw3.lib  glew32.lib  opengl32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

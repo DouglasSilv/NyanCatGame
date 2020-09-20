@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.12)
 
 project(EarthDefense)
 
-add_executable(EarthDefense main.cpp "ResourceManager.h" "ResourceManager.cpp" "Texture2D.cpp" "Texture2D.h" "Shader.cpp" "Shader.h" "Game.h" "BackgroundObject.cpp" "BackgroundObject.h" "GameObject.h" "GameObject.cpp" "SpriteRenderer.h" "SpriteRenderer.cpp" "Game.cpp" "PlayerObject.cpp" "PlayerObject.h")
+add_executable(EarthDefense main.cpp "ResourceManager.h" "ResourceManager.cpp" "Texture2D.cpp" "Texture2D.h" "Shader.cpp" "Shader.h" "Game.h" "BackgroundObject.cpp" "BackgroundObject.h" "GameObject.h" "GameObject.cpp" "SpriteRenderer.h" "SpriteRenderer.cpp" "Game.cpp" "PlayerObject.cpp" "PlayerObject.h" "EnemyObject.cpp" "EnemyObject.h")
 
 target_include_directories(EarthDefense PRIVATE deps/glm
 												deps/stb

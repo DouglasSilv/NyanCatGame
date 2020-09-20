@@ -7,6 +7,7 @@
 #include "Texture2D.h"
 #include "SpriteRenderer.h"
 #include "GameObject.h"
+#include "Game.h"
 
 // BallObject holds the state of the Ball object inheriting
 // relevant state data from GameObject. Contains some extra
@@ -16,13 +17,13 @@ class PlayerObject : public GameObject
 {
 public:
 	// Ball state	
-	int SpriteCount = 0;
+	float SpriteCount = 1;
 	// Constructor(s)
 	PlayerObject();
 	PlayerObject(glm::vec2 pos, Texture2D sprite);
 	PlayerObject(glm::vec2 pos, Texture2D sprite, glm::vec2 posTexture);
 	// Moves the ball, keeping it constrained within the window bounds (except bottom edge); returns new position
-	glm::vec2 Move(GLfloat dt, GLuint window_width);
+	glm::vec2 Move(GLfloat dt, GameState gameState);
 	// Resets the ball to original state with given position and velocity
 	void Reset(glm::vec2 position, glm::vec2 velocity);
 

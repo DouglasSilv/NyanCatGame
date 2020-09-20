@@ -52,19 +52,21 @@ int main(int argc, char* argv[])
 	// Initialize game
 	Breakout.Init();
 
-	// DeltaTime variables
-	GLfloat deltaTime = 0.0f;
-	GLfloat lastFrame = 0.0f;
-
 	// Start Game within Menu State
 	Breakout.State = GAME_ACTIVE;
+
+	double previousTime = glfwGetTime();
+
+	glfwSwapInterval(1);
 
 	while (!glfwWindowShouldClose(window))
 	{
 		// Calculate delta time
-		GLfloat currentFrame = glfwGetTime();
-		deltaTime = currentFrame - lastFrame;
-		lastFrame = currentFrame;
+		double currentTime = glfwGetTime();
+		double deltaTime = currentTime - previousTime;
+		if (deltaTime > 0.0) {
+			previousTime = currentTime;
+		}
 		glfwPollEvents();
 
 		//deltaTime = 0.001f;
