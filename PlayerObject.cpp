@@ -24,7 +24,7 @@ glm::vec2 PlayerObject::Move(GLfloat dt, GameState gameState)
 		this->SpriteCount = this->SpriteCount + 0.2f;
 	}
 
-	if (gameState == GAME_OVERING) {
+	if (gameState == GAME_OVER) {
 		this->Rotation += 5.0f * dt;
 		this->Position.y += 300.0f * dt;
 	}

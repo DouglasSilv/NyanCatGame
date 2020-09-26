@@ -13,7 +13,6 @@
 enum GameState {
 	GAME_ACTIVE,
 	GAME_OVER,
-	GAME_OVERING
 };
 
 const GLfloat PLAYER_VELOCITY(500.0f);

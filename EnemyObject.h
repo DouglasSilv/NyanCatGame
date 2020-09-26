@@ -13,8 +13,6 @@ class EnemyObject : public GameObject
 {
 public:
 
-	GLboolean Stuck;
-
 	EnemyObject(glm::vec2 pos, glm::vec2 size, Texture2D sprite);
 	void Move(GLfloat dt);
 	void Reset(glm::vec2 position);

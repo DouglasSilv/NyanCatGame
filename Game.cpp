@@ -220,7 +220,6 @@ void Game::Update(GLfloat dt)
 		Bullet3->Move(dt);
 	}
 
-	// Check for collisions
 	this->DoCollisions();
 }
 
@@ -231,7 +230,7 @@ GLboolean Game::OnScreen(GameObject& object)
 
 void Game::ProcessInput(GLfloat dt)
 {
-	if (this->State == GAME_OVERING) return;
+	if (this->State == GAME_OVER) return;
 
 	if (this->Keys[GLFW_KEY_W])	{
 		if (Player->Position.y > 0) {
@@ -258,7 +257,7 @@ void Game::ProcessInput(GLfloat dt)
 			Player->Velocity.y = 0.0f;
 		}
 	}
-	else if (this->State != GAME_OVERING) {
+	else if (this->State != GAME_OVER) {
 		Player->Rotation = 0.0f;
 
 		Player->Velocity.y = 0.0f;
@@ -302,22 +301,20 @@ void Game::DoCollisions()
 		CheckCollision(*Player, *Bullet1) ||
 		CheckCollision(*Player, *Bullet2) ||
 		CheckCollision(*Player, *Bullet3)) {
-		Background->Stuck = true;
-		Background2->Stuck = true;
 		Player->Velocity.y = 0.0f;
-		this->State = GAME_OVERING;
+		this->State = GAME_OVER;
 	}
 
 }
 
 GLboolean Game::CheckCollision(GameObject& one, GameObject& two)
 {
-	// Collision x-axis?
+
 	GLboolean collisionX = one.Position.x + one.Size.x >= two.Position.x &&
 		two.Position.x + two.Size.x >= one.Position.x;
-	// Collision y-axis?
+
 	GLboolean collisionY = one.Position.y + one.Size.y >= two.Position.y &&
 		two.Position.y + two.Size.y >= one.Position.y;
-	// Collision only if on both axes
+
 	return collisionX && collisionY;
 }

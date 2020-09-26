@@ -12,7 +12,6 @@
 class BackgroundObject : public GameObject
 {
 public:
-	GLboolean Stuck;
 
 	BackgroundObject(glm::vec2 pos, glm::vec2 size, Texture2D sprite);
 	void Move(BackgroundObject* background);

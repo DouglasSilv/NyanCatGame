@@ -6,13 +6,11 @@ BackgroundObject::BackgroundObject(glm::vec2 pos, glm::vec2 size, Texture2D spri
 		size,
 		sprite,
 		glm::vec3(1.0f),
-		glm::vec2(0.04f, 0.0f)),
-	Stuck(false) { }
+		glm::vec2(0.04f, 0.0f)) { }
 
 void BackgroundObject::Reset(glm::vec2 position)
 {
 	this->Position = position;
-	this->Stuck = false;
 }
 
 void BackgroundObject::Move(BackgroundObject* background)

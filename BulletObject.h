@@ -11,7 +11,6 @@
 class BulletObject : public GameObject
 {
 public:
-	GLboolean Stuck;
 	glm::vec2 Angle;
 
 	BulletObject(glm::vec2 pos, glm::vec2 size, Texture2D sprite);

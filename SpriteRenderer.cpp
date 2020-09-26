@@ -1,19 +1,18 @@
 
 #include "SpriteRenderer.h"
 
-
 SpriteRenderer::SpriteRenderer(Shader& shader)
 {
 	this->shader = shader;
-	this->posAnteriorX = 0.0f;
+	this->posBeforeX = 0.0f;
 	this->posX = 1.0f;
 	this->initRenderData();
 }
 
-SpriteRenderer::SpriteRenderer(Shader& shader, GLfloat posAnteriorX, GLfloat posX)
+SpriteRenderer::SpriteRenderer(Shader& shader, GLfloat posBeforeX, GLfloat posX)
 {
 	this->shader = shader;
-	this->posAnteriorX = posAnteriorX;
+	this->posBeforeX = posBeforeX;
 	this->posX = posX;
 	this->initRenderData();
 }
@@ -58,11 +57,11 @@ void SpriteRenderer::initRenderData()
 {
 	GLuint VBO;
 	GLfloat vertices[] = {
-		0.0f, 1.0f, this->posAnteriorX, 1.0f,
+		0.0f, 1.0f, this->posBeforeX, 1.0f,
 		1.0f, 0.0f, this->posX, 0.0f,
-		0.0f, 0.0f, this->posAnteriorX, 0.0f,
+		0.0f, 0.0f, this->posBeforeX, 0.0f,
 
-		0.0f, 1.0f, this->posAnteriorX, 1.0f,
+		0.0f, 1.0f, this->posBeforeX, 1.0f,
 		1.0f, 1.0f, this->posX, 1.0f,
 		1.0f, 0.0f, this->posX, 0.0f
 	};

@@ -87,7 +87,6 @@ Shader ResourceManager::loadShaderFromFile(const GLchar* vShaderFile, const GLch
 
 Texture2D ResourceManager::loadTextureFromFile(const GLchar* file, GLboolean alpha)
 {
-
 	Texture2D texture;
 
 	if (alpha)

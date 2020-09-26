@@ -24,7 +24,7 @@ private:
 
 	Shader shader;
 	GLuint quadVAO;
-	GLfloat posAnteriorX;
+	GLfloat posBeforeX;
 	GLfloat posX;
 
 	void initRenderData();
