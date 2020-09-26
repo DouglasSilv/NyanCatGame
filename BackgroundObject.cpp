@@ -2,11 +2,11 @@
 #include "BackgroundObject.h"
 
 BackgroundObject::BackgroundObject(glm::vec2 pos, glm::vec2 size, Texture2D sprite)
-	: GameObject(pos,              //posicao
-		size,                      //size
-		sprite,                    //sprite
-		glm::vec3(1.0f),           //color
-		glm::vec2(0.04f, 0.0f)),   //velocity
+	: GameObject(pos,
+		size,
+		sprite,
+		glm::vec3(1.0f),
+		glm::vec2(0.04f, 0.0f)),
 	Stuck(false) { }
 
 void BackgroundObject::Reset(glm::vec2 position)

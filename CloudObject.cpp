@@ -2,10 +2,10 @@
 #include "CloudObject.h"
 
 CloudObject::CloudObject(glm::vec2 pos, glm::vec2 size, Texture2D sprite)
-	: GameObject(pos,              //posicao
-		size,                      //size
-		sprite,                    //sprite
-		glm::vec3(1.0f),           //color
+	: GameObject(pos,
+		size,
+		sprite,
+		glm::vec3(1.0f),
 		glm::vec2(-200.0f, 0.0f)) { }
 
 void CloudObject::Reset(glm::vec2 position)

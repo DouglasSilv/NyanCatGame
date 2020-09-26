@@ -1,13 +1,3 @@
-
-
-/*******************************************************************
-** This code is part of Breakout.
-**
-** Breakout is free software: you can redistribute it and/or modify
-** it under the terms of the CC BY 4.0 license as published by
-** Creative Commons, either version 4 of the License, or (at your
-** option) any later version.
-******************************************************************/
 #define GLEW_STATIC
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -16,44 +6,37 @@
 #include "ResourceManager.h"
 
 
-// GLFW function declerations
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
-// The Width of the screen
+
 const GLuint SCREEN_WIDTH = 1280;
-// The height of the screen
+
 const GLuint SCREEN_HEIGHT = 720;
 
-Game Breakout(SCREEN_WIDTH, SCREEN_HEIGHT);
+Game NyanCatGame(SCREEN_WIDTH, SCREEN_HEIGHT);
 
 int main(int argc, char* argv[])
 {
 	glfwInit();
-	/*glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);*/
 
 	GLFWwindow* window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "NyanCat Game", nullptr, nullptr);
 	glfwMakeContextCurrent(window);
 
 	glewInit();
-	glGetError(); // Call it once to catch glewInit() bug, all other errors are now from our application.
+	glGetError();
 
 	glfwSetKeyCallback(window, key_callback);
 
-	// OpenGL configuration
 	glViewport(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 	glEnable(GL_CULL_FACE);
-	//Ativando transparencia
+
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-	// Initialize game
-	Breakout.Init();
 
-	// Start Game within Menu State
-	Breakout.State = GAME_ACTIVE;
+	NyanCatGame.Init();
+
+	NyanCatGame.State = GAME_ACTIVE;
 
 	double previousTime = glfwGetTime();
 
@@ -61,7 +44,6 @@ int main(int argc, char* argv[])
 
 	while (!glfwWindowShouldClose(window))
 	{
-		// Calculate delta time
 		double currentTime = glfwGetTime();
 		double deltaTime = currentTime - previousTime;
 		if (deltaTime > 0.0) {
@@ -69,22 +51,17 @@ int main(int argc, char* argv[])
 		}
 		glfwPollEvents();
 
-		//deltaTime = 0.001f;
-		// Manage user input
-		Breakout.ProcessInput(deltaTime);
+		NyanCatGame.ProcessInput(deltaTime);
 
-		// Update Game state
-		Breakout.Update(deltaTime);
+		NyanCatGame.Update(deltaTime);
 
-		// Render
 		glClearColor(1.0f, 1.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
-		Breakout.Render();
+		NyanCatGame.Render();
 
 		glfwSwapBuffers(window);
 	}
 
-	// Delete all resources as loaded using the resource manager
 	ResourceManager::Clear();
 
 	glfwTerminate();
@@ -93,15 +70,14 @@ int main(int argc, char* argv[])
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)
 {
-	// When a user presses the escape key, we set the WindowShouldClose property to true, closing the application
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, GL_TRUE);
 	if (key >= 0 && key < 1024)
 	{
 		if (action == GLFW_PRESS)
-			Breakout.Keys[key] = GL_TRUE;
+			NyanCatGame.Keys[key] = GL_TRUE;
 		else if (action == GLFW_RELEASE)
-			Breakout.Keys[key] = GL_FALSE;
+			NyanCatGame.Keys[key] = GL_FALSE;
 	}
 }
 

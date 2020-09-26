@@ -2,10 +2,10 @@
 #include "BulletObject.h"
 
 BulletObject::BulletObject(glm::vec2 pos, glm::vec2 size, Texture2D sprite)
-	: GameObject(pos,              //posicao
-		size,                      //size
-		sprite,                    //sprite
-		glm::vec3(1.0f),           //color
+	: GameObject(pos,
+		size,
+		sprite,
+		glm::vec3(1.0f),
 		glm::vec2(-650.0f, -300.0f)) { 
 	this->Rotation = 5.0f;
 	this->Angle = glm::vec2(1.0f, 1.0f);
