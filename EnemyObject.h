@@ -26,7 +26,7 @@ public:
 	// Moves the ball, keeping it constrained within the window bounds (except bottom edge); returns new position
 	void Move(GLfloat dt);
 	// Resets the ball to original state with given position and velocity
-	void Reset(glm::vec2 position, glm::vec2 velocity);
+	void Reset(glm::vec2 position);
 };
 
 #endif

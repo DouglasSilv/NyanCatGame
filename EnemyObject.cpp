@@ -8,10 +8,9 @@ EnemyObject::EnemyObject(glm::vec2 pos, glm::vec2 size, Texture2D sprite)
 		glm::vec3(1.0f),           //color
 		glm::vec2(-300.0f, 0.0f)) { }
 
-void EnemyObject::Reset(glm::vec2 position, glm::vec2 velocity)
+void EnemyObject::Reset(glm::vec2 position)
 {
 	this->Position = position;
-	this->Velocity = velocity;
 }
 
 void EnemyObject::Move(GLfloat dt)

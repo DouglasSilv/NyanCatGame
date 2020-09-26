@@ -56,6 +56,7 @@ public:
 	void Render();
 	void DoCollisions();
 	GLboolean CheckCollision(GameObject& one, GameObject& two);
+	GLboolean OnScreen(GameObject& object);
 };
 
 #endif

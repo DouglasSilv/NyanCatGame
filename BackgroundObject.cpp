@@ -9,10 +9,9 @@ BackgroundObject::BackgroundObject(glm::vec2 pos, glm::vec2 size, Texture2D spri
 		glm::vec2(0.04f, 0.0f)),   //velocity
 	Stuck(false) { }
 
-void BackgroundObject::Reset(glm::vec2 position, glm::vec2 velocity)
+void BackgroundObject::Reset(glm::vec2 position)
 {
 	this->Position = position;
-	this->Velocity = velocity;
 	this->Stuck = false;
 }
 

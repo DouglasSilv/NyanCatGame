@@ -33,9 +33,9 @@ glm::vec2 PlayerObject::Move(GLfloat dt, GameState gameState)
 }
 
 // Resets the ball to initial Stuck Position (if ball is outside window bounds)
-void PlayerObject::Reset(glm::vec2 position, glm::vec2 velocity)
+void PlayerObject::Reset(glm::vec2 position)
 {
 	this->Position = position;
-	this->Velocity = velocity;
+	this->Rotation = 0;
 	this->SpriteCount = 0;
 }
