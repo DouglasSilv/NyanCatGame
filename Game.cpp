@@ -18,10 +18,10 @@ CloudObject* Cloud;
 
 PlayerObject* Player;
 
-glm::vec2 backgroundPosition;
-glm::vec2 background2Position;
-glm::vec2 playerPosition;
-glm::vec2 cloudPosition;
+glm::vec2 BackgroundPosition;
+glm::vec2 Background2Position;
+glm::vec2 PlayerPosition;
+glm::vec2 CloudPosition;
 
 std::map<int, BulletObject*> Bullets;
 
@@ -58,9 +58,9 @@ void Game::Init()
 {
 	ResourceManager::LoadShader("shaders/sprite.vs", "shaders/sprite.frag", nullptr, "sprite");
 
-	glm::mat4 projection = glm::ortho(0.0f, static_cast<GLfloat>(this->Width), static_cast<GLfloat>(this->Height), 0.0f, -1.0f, 1.0f);
+	glm::mat4 Projection = glm::ortho(0.0f, static_cast<GLfloat>(this->Width), static_cast<GLfloat>(this->Height), 0.0f, -1.0f, 1.0f);
 	ResourceManager::GetShader("sprite").Use().SetInteger("sprite", 0);
-	ResourceManager::GetShader("sprite").SetMatrix4("projection", projection);
+	ResourceManager::GetShader("sprite").SetMatrix4("projection", Projection);
 
 	ResourceManager::LoadTexture("textures/background.jpg", GL_FALSE, "background");
 
@@ -78,17 +78,17 @@ void Game::Init()
 
 	ResourceManager::LoadTexture("textures/star.png", GL_TRUE, "star");
 
-	Shader shader = ResourceManager::GetShader("sprite");
-	Renderer = new SpriteRenderer(shader);
+	Shader Shader = ResourceManager::GetShader("sprite");
+	Renderer = new SpriteRenderer(Shader);
 
-	backgroundPosition = glm::vec2(0, 0);
-	Background = new BackgroundObject(backgroundPosition, glm::vec2(1280, this->Height), ResourceManager::GetTexture("background"));
+	BackgroundPosition = glm::vec2(0, 0);
+	Background = new BackgroundObject(BackgroundPosition, glm::vec2(1280, this->Height), ResourceManager::GetTexture("background"));
 
-	background2Position = glm::vec2(1280, 0);
-	Background2 = new BackgroundObject(background2Position, glm::vec2((this->Width), (this->Height)), ResourceManager::GetTexture("background"));
+	Background2Position = glm::vec2(1280, 0);
+	Background2 = new BackgroundObject(Background2Position, glm::vec2((this->Width), (this->Height)), ResourceManager::GetTexture("background"));
 
-	playerPosition = glm::vec2(200, 300);
-	Player = new PlayerObject(playerPosition, ResourceManager::GetTexture("nyancat"));
+	PlayerPosition = glm::vec2(200, 300);
+	Player = new PlayerObject(PlayerPosition, ResourceManager::GetTexture("nyancat"));
 
 	EnemiesPositions[1] = glm::vec2(1500, GenerateRandomFloat(0.0f, 650.0f));
 	Enemies[1] = new EnemyObject(EnemiesPositions[1], glm::vec2(85, 85), ResourceManager::GetTexture("dogenemy"));
@@ -111,8 +111,8 @@ void Game::Init()
 	EnemiesPositions[7] = glm::vec2(2850, GenerateRandomFloat(0.0f, 650.0f));
 	Enemies[7] = new EnemyObject(EnemiesPositions[7], glm::vec2(100, 90), ResourceManager::GetTexture("patoenemy"));
 
-	cloudPosition = glm::vec2(1500, GenerateRandomFloat(0.0f, 520));
-	Cloud = new CloudObject(cloudPosition, glm::vec2(400, 200), ResourceManager::GetTexture("cloud"));
+	CloudPosition = glm::vec2(1500, GenerateRandomFloat(0.0f, 520));
+	Cloud = new CloudObject(CloudPosition, glm::vec2(400, 200), ResourceManager::GetTexture("cloud"));
 
 	BulletsPositions[1] = glm::vec2(-30.0f, 0.0f);
 	Bullets[1] = new BulletObject(BulletsPositions[1], glm::vec2(30, 30), ResourceManager::GetTexture("star"));
@@ -139,15 +139,15 @@ void Game::Update(GLfloat dt)
 
 	if (Player->Position.y > 900.0f) {
 		this->State = GAME_ACTIVE;
-		Background->Reset(backgroundPosition);
-		Background2->Reset(background2Position);
-		Player->Reset(playerPosition);
+		Background->Reset(BackgroundPosition);
+		Background2->Reset(Background2Position);
+		Player->Reset(PlayerPosition);
 
 		for (int n = 1; n <= 7; n++) {
 			Enemies[n]->Reset(EnemiesPositions[n]);
 		}
 
-		Cloud->Reset(cloudPosition);
+		Cloud->Reset(CloudPosition);
 
 		for (int n = 1; n <= 3; n++) {
 			Bullets[n]->Reset(BulletsPositions[n]);
@@ -210,8 +210,8 @@ void Game::ProcessInput(GLfloat dt)
 
 void Game::Render()
 {
-	Shader shader = ResourceManager::GetShader("sprite");
-	RendererPlayer = new SpriteRenderer(shader, ((int) Player->SpriteCount) * 0.2f, ((int) Player->SpriteCount) * 0.2f + 0.2f);
+	Shader Shader = ResourceManager::GetShader("sprite");
+	RendererPlayer = new SpriteRenderer(Shader, ((int) Player->SpriteCount) * 0.2f, ((int) Player->SpriteCount) * 0.2f + 0.2f);
 
 	Background->Draw(*Renderer, 0.1f);
 	Background2->Draw(*Renderer, 0.1f);
