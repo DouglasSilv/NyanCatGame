@@ -18,32 +18,18 @@ CloudObject* Cloud;
 
 PlayerObject* Player;
 
-EnemyObject* Enemy1;
-EnemyObject* Enemy2;
-EnemyObject* Enemy3;
-EnemyObject* Enemy4;
-EnemyObject* Enemy5;
-EnemyObject* Enemy6;
-EnemyObject* Enemy7;
-
-BulletObject* Bullet1;
-BulletObject* Bullet2;
-BulletObject* Bullet3;
-
 glm::vec2 backgroundPosition;
 glm::vec2 background2Position;
 glm::vec2 playerPosition;
-glm::vec2 enemy1Position;
-glm::vec2 enemy2Position;
-glm::vec2 enemy3Position;
-glm::vec2 enemy4Position;
-glm::vec2 enemy5Position;
-glm::vec2 enemy6Position;
-glm::vec2 enemy7Position;
 glm::vec2 cloudPosition;
-glm::vec2 bullet1Position;
-glm::vec2 bullet2Position;
-glm::vec2 bullet3Position;
+
+std::map<int, BulletObject*> Bullets;
+
+std::map<int, EnemyObject*> Enemies;
+
+std::map<int, glm::vec2> EnemiesPositions;
+
+std::map<int, glm::vec2> BulletsPositions;
 
 int enemyToShoot = 1;
 
@@ -104,63 +90,38 @@ void Game::Init()
 	playerPosition = glm::vec2(200, 300);
 	Player = new PlayerObject(playerPosition, ResourceManager::GetTexture("nyancat"));
 
-	enemy1Position = glm::vec2(1500, GenerateRandomFloat(0.0f, 650.0f));
-	Enemy1 = new EnemyObject(enemy1Position, glm::vec2(85, 85), ResourceManager::GetTexture("dogenemy"));
+	EnemiesPositions[1] = glm::vec2(1500, GenerateRandomFloat(0.0f, 650.0f));
+	Enemies[1] = new EnemyObject(EnemiesPositions[1], glm::vec2(85, 85), ResourceManager::GetTexture("dogenemy"));
 
-	enemy2Position = glm::vec2(1725, GenerateRandomFloat(0.0f, 650.0f));
-	Enemy2 = new EnemyObject(enemy2Position, glm::vec2(163, 120), ResourceManager::GetTexture("hemanenemy"));
+	EnemiesPositions[2] = glm::vec2(1725, GenerateRandomFloat(0.0f, 650.0f));
+	Enemies[2] = new EnemyObject(EnemiesPositions[2], glm::vec2(163, 120), ResourceManager::GetTexture("hemanenemy"));
 
-	enemy3Position = glm::vec2(1950, GenerateRandomFloat(0.0f, 650.0f));
-	Enemy3 = new EnemyObject(enemy3Position, glm::vec2(100, 90), ResourceManager::GetTexture("pikachuenemy"));
+	EnemiesPositions[3] = glm::vec2(1950, GenerateRandomFloat(0.0f, 650.0f));
+	Enemies[3] = new EnemyObject(EnemiesPositions[3], glm::vec2(100, 90), ResourceManager::GetTexture("pikachuenemy"));
 
-	enemy4Position = glm::vec2(2175, GenerateRandomFloat(0.0f, 650.0f));
-	Enemy4 = new EnemyObject(enemy4Position, glm::vec2(100, 90), ResourceManager::GetTexture("bobenemy"));
+	EnemiesPositions[4] = glm::vec2(2175, GenerateRandomFloat(0.0f, 650.0f));
+	Enemies[4] = new EnemyObject(EnemiesPositions[4], glm::vec2(100, 90), ResourceManager::GetTexture("bobenemy"));
 
-	enemy5Position = glm::vec2(2400, GenerateRandomFloat(0.0f, 650.0f));
-	Enemy5 = new EnemyObject(enemy5Position, glm::vec2(100, 90), ResourceManager::GetTexture("feelsbadenemy"));
+	EnemiesPositions[5] = glm::vec2(2400, GenerateRandomFloat(0.0f, 650.0f));
+	Enemies[5] = new EnemyObject(EnemiesPositions[5], glm::vec2(100, 90), ResourceManager::GetTexture("feelsbadenemy"));
 
-	enemy6Position = glm::vec2(2625, GenerateRandomFloat(0.0f, 650.0f));
-	Enemy6 = new EnemyObject(enemy6Position, glm::vec2(100, 90), ResourceManager::GetTexture("iluminatienemy"));
+	EnemiesPositions[6] = glm::vec2(2625, GenerateRandomFloat(0.0f, 650.0f));
+	Enemies[6] = new EnemyObject(EnemiesPositions[6], glm::vec2(100, 90), ResourceManager::GetTexture("iluminatienemy"));
 
-	enemy7Position = glm::vec2(2850, GenerateRandomFloat(0.0f, 650.0f));
-	Enemy7 = new EnemyObject(enemy7Position, glm::vec2(100, 90), ResourceManager::GetTexture("patoenemy"));
+	EnemiesPositions[7] = glm::vec2(2850, GenerateRandomFloat(0.0f, 650.0f));
+	Enemies[7] = new EnemyObject(EnemiesPositions[7], glm::vec2(100, 90), ResourceManager::GetTexture("patoenemy"));
 
 	cloudPosition = glm::vec2(1500, GenerateRandomFloat(0.0f, 520));
 	Cloud = new CloudObject(cloudPosition, glm::vec2(400, 200), ResourceManager::GetTexture("cloud"));
 
-	bullet1Position = glm::vec2(-30.0f, 0.0f);
-	Bullet1 = new BulletObject(bullet1Position, glm::vec2(30, 30), ResourceManager::GetTexture("star"));
+	BulletsPositions[1] = glm::vec2(-30.0f, 0.0f);
+	Bullets[1] = new BulletObject(BulletsPositions[1], glm::vec2(30, 30), ResourceManager::GetTexture("star"));
 
-	bullet2Position = glm::vec2(-30.0f, 0.0f);
-	Bullet2 = new BulletObject(bullet2Position, glm::vec2(30, 30), ResourceManager::GetTexture("star"));
+	BulletsPositions[2] = glm::vec2(-30.0f, 0.0f);
+	Bullets[2] = new BulletObject(BulletsPositions[2], glm::vec2(30, 30), ResourceManager::GetTexture("star"));
 
-	bullet3Position = glm::vec2(-30.0f, 0.0f);
-	Bullet3 = new BulletObject(bullet3Position, glm::vec2(30, 30), ResourceManager::GetTexture("star"));
-}
-
-EnemyObject* GetEnemyToShoot()
-{
-	if (enemyToShoot == 1) {
-		return Enemy1;
-	}
-	else if (enemyToShoot == 2) {
-		return Enemy2;
-	}
-	else if (enemyToShoot == 3) {
-		return Enemy3;
-	}
-	else if (enemyToShoot == 4) {
-		return Enemy4;
-	}
-	else if (enemyToShoot == 5) {
-		return Enemy5;
-	}
-	else if (enemyToShoot == 6) {
-		return Enemy6;
-	}
-	else {
-		return Enemy7;
-	}
+	BulletsPositions[3] = glm::vec2(-30.0f, 0.0f);
+	Bullets[3] = new BulletObject(BulletsPositions[3], glm::vec2(30, 30), ResourceManager::GetTexture("star"));
 }
 
 void Game::Update(GLfloat dt)
@@ -170,54 +131,37 @@ void Game::Update(GLfloat dt)
 
 	Player->Move(dt, this->State);
 
-	Enemy1->Move(dt);
-	Enemy2->Move(dt);
-	Enemy3->Move(dt);
-	Enemy4->Move(dt);
-	Enemy5->Move(dt);
-	Enemy6->Move(dt);
-	Enemy7->Move(dt);
 	Cloud->Move(dt);
+
+	for (int n = 1; n <= 7; n++) {
+		Enemies[n]->Move(dt);
+	}
 
 	if (Player->Position.y > 900.0f) {
 		this->State = GAME_ACTIVE;
 		Background->Reset(backgroundPosition);
 		Background2->Reset(background2Position);
 		Player->Reset(playerPosition);
-		Enemy1->Reset(enemy1Position);
-		Enemy2->Reset(enemy2Position);
-		Enemy3->Reset(enemy3Position);
-		Enemy4->Reset(enemy4Position);
-		Enemy5->Reset(enemy5Position);
-		Enemy6->Reset(enemy6Position);
-		Enemy7->Reset(enemy7Position);
+
+		for (int n = 1; n <= 7; n++) {
+			Enemies[n]->Reset(EnemiesPositions[n]);
+		}
+
 		Cloud->Reset(cloudPosition);
-		Bullet1->Reset(bullet1Position);
-		Bullet2->Reset(bullet2Position);
-		Bullet3->Reset(bullet3Position);
+
+		for (int n = 1; n <= 3; n++) {
+			Bullets[n]->Reset(BulletsPositions[n]);
+		}
 	}
 
-	if (!OnScreen(*Bullet1)) {
-		Bullet1->Move(dt, GetEnemyToShoot()->Position);
-		enemyToShoot = (int) GenerateRandomFloat(1, 7);
-	} else {
-		Bullet1->Move(dt);
-	}
-
-	if (!OnScreen(*Bullet2)) {
-		Bullet2->Move(dt, GetEnemyToShoot()->Position);
-		enemyToShoot = (int )GenerateRandomFloat(1, 7);
-	}
-	else {
-		Bullet2->Move(dt);
-	}
-
-	if (!OnScreen(*Bullet3)) {
-		Bullet3->Move(dt, GetEnemyToShoot()->Position);
-		enemyToShoot = (int) GenerateRandomFloat(1, 7);
-	}
-	else {
-		Bullet3->Move(dt);
+	for (int n = 1; n <= 3; n++) {
+		if (!OnScreen(*Bullets[n])) {
+			Bullets[n]->Move(dt, Enemies[enemyToShoot]->Position);
+			enemyToShoot = (int) GenerateRandomFloat(1, 7);
+		}
+		else {
+			Bullets[n]->Move(dt);
+		}
 	}
 
 	this->DoCollisions();
@@ -274,33 +218,31 @@ void Game::Render()
 
 	Player->Draw(*RendererPlayer, 0.2f);
 
-	Enemy1->Draw(*Renderer, 0.3f);
-	Enemy2->Draw(*Renderer, 0.3f);
-	Enemy3->Draw(*Renderer, 0.3f);
-	Enemy4->Draw(*Renderer, 0.3f);
-	Enemy5->Draw(*Renderer, 0.3f);
-	Enemy6->Draw(*Renderer, 0.3f);
-	Enemy7->Draw(*Renderer, 0.3f);
+	for (int n = 1; n <= 7; n++) {
+		Enemies[n]->Draw(*Renderer, 0.3f);
+	}
+
 	Cloud->Draw(*Renderer, 0.3f);
-	Bullet1->Draw(*Renderer, 0.3f);
-	Bullet2->Draw(*Renderer, 0.3f);
-	Bullet3->Draw(*Renderer, 0.3f);
+
+	for (int n = 1; n <= 3; n++) {
+		Bullets[n]->Draw(*Renderer, 0.3f);
+	}
 }
 
 
 void Game::DoCollisions()
 {
 
-	if (CheckCollision(*Player, *Enemy1) || 
-		CheckCollision(*Player, *Enemy2) ||
-		CheckCollision(*Player, *Enemy3) ||
-		CheckCollision(*Player, *Enemy4) ||
-		CheckCollision(*Player, *Enemy5) ||
-		CheckCollision(*Player, *Enemy6) ||
-		CheckCollision(*Player, *Enemy7) ||
-		CheckCollision(*Player, *Bullet1) ||
-		CheckCollision(*Player, *Bullet2) ||
-		CheckCollision(*Player, *Bullet3)) {
+	if (CheckCollision(*Player, *Enemies[1]) ||
+		CheckCollision(*Player, *Enemies[2]) ||
+		CheckCollision(*Player, *Enemies[3]) ||
+		CheckCollision(*Player, *Enemies[4]) ||
+		CheckCollision(*Player, *Enemies[5]) ||
+		CheckCollision(*Player, *Enemies[6]) ||
+		CheckCollision(*Player, *Enemies[7]) ||
+		CheckCollision(*Player, *Bullets[1]) ||
+		CheckCollision(*Player, *Bullets[2]) ||
+		CheckCollision(*Player, *Bullets[3])) {
 		Player->Velocity.y = 0.0f;
 		this->State = GAME_OVER;
 	}
@@ -309,7 +251,6 @@ void Game::DoCollisions()
 
 GLboolean Game::CheckCollision(GameObject& one, GameObject& two)
 {
-
 	GLboolean collisionX = one.Position.x + one.Size.x >= two.Position.x &&
 		two.Position.x + two.Size.x >= one.Position.x;
 
