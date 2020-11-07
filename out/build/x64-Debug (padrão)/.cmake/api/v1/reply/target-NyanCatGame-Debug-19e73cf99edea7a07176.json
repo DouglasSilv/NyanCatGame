@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "EarthDefense.exe"
+			"path" : "NyanCatGame.exe"
 		},
 		{
-			"path" : "EarthDefense.pdb"
+			"path" : "NyanCatGame.pdb"
 		}
 	],
 	"backtrace" : 2,
@@ -107,7 +107,7 @@
 			]
 		}
 	],
-	"id" : "EarthDefense::@6890427a1f51a3e7e1df",
+	"id" : "NyanCatGame::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -152,8 +152,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "EarthDefense",
-	"nameOnDisk" : "EarthDefense.exe",
+	"name" : "NyanCatGame",
+	"nameOnDisk" : "NyanCatGame.exe",
 	"paths" : 
 	{
 		"build" : ".",

@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: EarthDefense
+# Project: NyanCatGame
 # Configurations: Debug
 # =============================================================================
 
@@ -34,6 +34,143 @@ CONFIGURATION = Debug
 
 include rules.ninja
 
+# =============================================================================
+# Object build statements for EXECUTABLE target NyanCatGame
+
+
+#############################################
+# Order-only phony target for NyanCatGame
+
+build cmake_object_order_depends_target_NyanCatGame_Debug: phony || CMakeFiles\NyanCatGame.dir
+
+build CMakeFiles\NyanCatGame.dir\main.cpp.obj: CXX_COMPILER__NyanCatGame_Debug ..\..\..\main.cpp || cmake_object_order_depends_target_NyanCatGame_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
+  OBJECT_DIR = CMakeFiles\NyanCatGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\NyanCatGame.dir
+  TARGET_COMPILE_PDB = CMakeFiles\NyanCatGame.dir\
+  TARGET_PDB = NyanCatGame.pdb
+
+build CMakeFiles\NyanCatGame.dir\ResourceManager.cpp.obj: CXX_COMPILER__NyanCatGame_Debug ..\..\..\ResourceManager.cpp || cmake_object_order_depends_target_NyanCatGame_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
+  OBJECT_DIR = CMakeFiles\NyanCatGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\NyanCatGame.dir
+  TARGET_COMPILE_PDB = CMakeFiles\NyanCatGame.dir\
+  TARGET_PDB = NyanCatGame.pdb
+
+build CMakeFiles\NyanCatGame.dir\Texture2D.cpp.obj: CXX_COMPILER__NyanCatGame_Debug ..\..\..\Texture2D.cpp || cmake_object_order_depends_target_NyanCatGame_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
+  OBJECT_DIR = CMakeFiles\NyanCatGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\NyanCatGame.dir
+  TARGET_COMPILE_PDB = CMakeFiles\NyanCatGame.dir\
+  TARGET_PDB = NyanCatGame.pdb
+
+build CMakeFiles\NyanCatGame.dir\Shader.cpp.obj: CXX_COMPILER__NyanCatGame_Debug ..\..\..\Shader.cpp || cmake_object_order_depends_target_NyanCatGame_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
+  OBJECT_DIR = CMakeFiles\NyanCatGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\NyanCatGame.dir
+  TARGET_COMPILE_PDB = CMakeFiles\NyanCatGame.dir\
+  TARGET_PDB = NyanCatGame.pdb
+
+build CMakeFiles\NyanCatGame.dir\BackgroundObject.cpp.obj: CXX_COMPILER__NyanCatGame_Debug ..\..\..\BackgroundObject.cpp || cmake_object_order_depends_target_NyanCatGame_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
+  OBJECT_DIR = CMakeFiles\NyanCatGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\NyanCatGame.dir
+  TARGET_COMPILE_PDB = CMakeFiles\NyanCatGame.dir\
+  TARGET_PDB = NyanCatGame.pdb
+
+build CMakeFiles\NyanCatGame.dir\GameObject.cpp.obj: CXX_COMPILER__NyanCatGame_Debug ..\..\..\GameObject.cpp || cmake_object_order_depends_target_NyanCatGame_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
+  OBJECT_DIR = CMakeFiles\NyanCatGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\NyanCatGame.dir
+  TARGET_COMPILE_PDB = CMakeFiles\NyanCatGame.dir\
+  TARGET_PDB = NyanCatGame.pdb
+
+build CMakeFiles\NyanCatGame.dir\SpriteRenderer.cpp.obj: CXX_COMPILER__NyanCatGame_Debug ..\..\..\SpriteRenderer.cpp || cmake_object_order_depends_target_NyanCatGame_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
+  OBJECT_DIR = CMakeFiles\NyanCatGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\NyanCatGame.dir
+  TARGET_COMPILE_PDB = CMakeFiles\NyanCatGame.dir\
+  TARGET_PDB = NyanCatGame.pdb
+
+build CMakeFiles\NyanCatGame.dir\Game.cpp.obj: CXX_COMPILER__NyanCatGame_Debug ..\..\..\Game.cpp || cmake_object_order_depends_target_NyanCatGame_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
+  OBJECT_DIR = CMakeFiles\NyanCatGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\NyanCatGame.dir
+  TARGET_COMPILE_PDB = CMakeFiles\NyanCatGame.dir\
+  TARGET_PDB = NyanCatGame.pdb
+
+build CMakeFiles\NyanCatGame.dir\PlayerObject.cpp.obj: CXX_COMPILER__NyanCatGame_Debug ..\..\..\PlayerObject.cpp || cmake_object_order_depends_target_NyanCatGame_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
+  OBJECT_DIR = CMakeFiles\NyanCatGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\NyanCatGame.dir
+  TARGET_COMPILE_PDB = CMakeFiles\NyanCatGame.dir\
+  TARGET_PDB = NyanCatGame.pdb
+
+build CMakeFiles\NyanCatGame.dir\EnemyObject.cpp.obj: CXX_COMPILER__NyanCatGame_Debug ..\..\..\EnemyObject.cpp || cmake_object_order_depends_target_NyanCatGame_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
+  OBJECT_DIR = CMakeFiles\NyanCatGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\NyanCatGame.dir
+  TARGET_COMPILE_PDB = CMakeFiles\NyanCatGame.dir\
+  TARGET_PDB = NyanCatGame.pdb
+
+build CMakeFiles\NyanCatGame.dir\CloudObject.cpp.obj: CXX_COMPILER__NyanCatGame_Debug ..\..\..\CloudObject.cpp || cmake_object_order_depends_target_NyanCatGame_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
+  OBJECT_DIR = CMakeFiles\NyanCatGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\NyanCatGame.dir
+  TARGET_COMPILE_PDB = CMakeFiles\NyanCatGame.dir\
+  TARGET_PDB = NyanCatGame.pdb
+
+build CMakeFiles\NyanCatGame.dir\BulletObject.cpp.obj: CXX_COMPILER__NyanCatGame_Debug ..\..\..\BulletObject.cpp || cmake_object_order_depends_target_NyanCatGame_Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
+  OBJECT_DIR = CMakeFiles\NyanCatGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\NyanCatGame.dir
+  TARGET_COMPILE_PDB = CMakeFiles\NyanCatGame.dir\
+  TARGET_PDB = NyanCatGame.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target NyanCatGame
+
+
+#############################################
+# Link the executable NyanCatGame.exe
+
+build NyanCatGame.exe: CXX_EXECUTABLE_LINKER__NyanCatGame_Debug CMakeFiles\NyanCatGame.dir\main.cpp.obj CMakeFiles\NyanCatGame.dir\ResourceManager.cpp.obj CMakeFiles\NyanCatGame.dir\Texture2D.cpp.obj CMakeFiles\NyanCatGame.dir\Shader.cpp.obj CMakeFiles\NyanCatGame.dir\BackgroundObject.cpp.obj CMakeFiles\NyanCatGame.dir\GameObject.cpp.obj CMakeFiles\NyanCatGame.dir\SpriteRenderer.cpp.obj CMakeFiles\NyanCatGame.dir\Game.cpp.obj CMakeFiles\NyanCatGame.dir\PlayerObject.cpp.obj CMakeFiles\NyanCatGame.dir\EnemyObject.cpp.obj CMakeFiles\NyanCatGame.dir\CloudObject.cpp.obj CMakeFiles\NyanCatGame.dir\BulletObject.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = glfw3.lib  glew32.lib  opengl32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_PATH = -LIBPATH:D:\dev\NyanCatGame\deps\glfw\lib-vc2019   -LIBPATH:D:\dev\NyanCatGame\deps\glew\lib\Release\x64
+  OBJECT_DIR = CMakeFiles\NyanCatGame.dir
+  POST_BUILD = cmd.exe /C "cd /D "D:\dev\NyanCatGame\out\build\x64-Debug (padrão)" && powershell -noprofile -executionpolicy Bypass -file D:/dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/NyanCatGame.exe" -installedDir D:/dev/vcpkg/installed/x64-windows/debug/bin -OutVariable out && cd /D "D:\dev\NyanCatGame\out\build\x64-Debug (padrão)" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/dev/NyanCatGame/deps/glew/bin/Release/x64/glew32.dll "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/glew32.dll" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E create_symlink D:/dev/NyanCatGame/shaders "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/shaders" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E create_symlink D:/dev/NyanCatGame/textures "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/textures""
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\NyanCatGame.dir\
+  TARGET_FILE = NyanCatGame.exe
+  TARGET_IMPLIB = NyanCatGame.lib
+  TARGET_PDB = NyanCatGame.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "D:\dev\NyanCatGame\out\build\x64-Debug (padrão)" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles\edit_cache.util
+
 
 #############################################
 # Utility command for rebuild_cache
@@ -47,146 +184,9 @@ build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 # =============================================================================
-# Object build statements for EXECUTABLE target EarthDefense
-
-
-#############################################
-# Order-only phony target for EarthDefense
-
-build cmake_object_order_depends_target_EarthDefense_Debug: phony || CMakeFiles\EarthDefense.dir
-
-build CMakeFiles\EarthDefense.dir\main.cpp.obj: CXX_COMPILER__EarthDefense_Debug ..\..\..\main.cpp || cmake_object_order_depends_target_EarthDefense_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
-  OBJECT_DIR = CMakeFiles\EarthDefense.dir
-  OBJECT_FILE_DIR = CMakeFiles\EarthDefense.dir
-  TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
-  TARGET_PDB = EarthDefense.pdb
-
-build CMakeFiles\EarthDefense.dir\ResourceManager.cpp.obj: CXX_COMPILER__EarthDefense_Debug ..\..\..\ResourceManager.cpp || cmake_object_order_depends_target_EarthDefense_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
-  OBJECT_DIR = CMakeFiles\EarthDefense.dir
-  OBJECT_FILE_DIR = CMakeFiles\EarthDefense.dir
-  TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
-  TARGET_PDB = EarthDefense.pdb
-
-build CMakeFiles\EarthDefense.dir\Texture2D.cpp.obj: CXX_COMPILER__EarthDefense_Debug ..\..\..\Texture2D.cpp || cmake_object_order_depends_target_EarthDefense_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
-  OBJECT_DIR = CMakeFiles\EarthDefense.dir
-  OBJECT_FILE_DIR = CMakeFiles\EarthDefense.dir
-  TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
-  TARGET_PDB = EarthDefense.pdb
-
-build CMakeFiles\EarthDefense.dir\Shader.cpp.obj: CXX_COMPILER__EarthDefense_Debug ..\..\..\Shader.cpp || cmake_object_order_depends_target_EarthDefense_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
-  OBJECT_DIR = CMakeFiles\EarthDefense.dir
-  OBJECT_FILE_DIR = CMakeFiles\EarthDefense.dir
-  TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
-  TARGET_PDB = EarthDefense.pdb
-
-build CMakeFiles\EarthDefense.dir\BackgroundObject.cpp.obj: CXX_COMPILER__EarthDefense_Debug ..\..\..\BackgroundObject.cpp || cmake_object_order_depends_target_EarthDefense_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
-  OBJECT_DIR = CMakeFiles\EarthDefense.dir
-  OBJECT_FILE_DIR = CMakeFiles\EarthDefense.dir
-  TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
-  TARGET_PDB = EarthDefense.pdb
-
-build CMakeFiles\EarthDefense.dir\GameObject.cpp.obj: CXX_COMPILER__EarthDefense_Debug ..\..\..\GameObject.cpp || cmake_object_order_depends_target_EarthDefense_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
-  OBJECT_DIR = CMakeFiles\EarthDefense.dir
-  OBJECT_FILE_DIR = CMakeFiles\EarthDefense.dir
-  TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
-  TARGET_PDB = EarthDefense.pdb
-
-build CMakeFiles\EarthDefense.dir\SpriteRenderer.cpp.obj: CXX_COMPILER__EarthDefense_Debug ..\..\..\SpriteRenderer.cpp || cmake_object_order_depends_target_EarthDefense_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
-  OBJECT_DIR = CMakeFiles\EarthDefense.dir
-  OBJECT_FILE_DIR = CMakeFiles\EarthDefense.dir
-  TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
-  TARGET_PDB = EarthDefense.pdb
-
-build CMakeFiles\EarthDefense.dir\Game.cpp.obj: CXX_COMPILER__EarthDefense_Debug ..\..\..\Game.cpp || cmake_object_order_depends_target_EarthDefense_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
-  OBJECT_DIR = CMakeFiles\EarthDefense.dir
-  OBJECT_FILE_DIR = CMakeFiles\EarthDefense.dir
-  TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
-  TARGET_PDB = EarthDefense.pdb
-
-build CMakeFiles\EarthDefense.dir\PlayerObject.cpp.obj: CXX_COMPILER__EarthDefense_Debug ..\..\..\PlayerObject.cpp || cmake_object_order_depends_target_EarthDefense_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
-  OBJECT_DIR = CMakeFiles\EarthDefense.dir
-  OBJECT_FILE_DIR = CMakeFiles\EarthDefense.dir
-  TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
-  TARGET_PDB = EarthDefense.pdb
-
-build CMakeFiles\EarthDefense.dir\EnemyObject.cpp.obj: CXX_COMPILER__EarthDefense_Debug ..\..\..\EnemyObject.cpp || cmake_object_order_depends_target_EarthDefense_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
-  OBJECT_DIR = CMakeFiles\EarthDefense.dir
-  OBJECT_FILE_DIR = CMakeFiles\EarthDefense.dir
-  TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
-  TARGET_PDB = EarthDefense.pdb
-
-build CMakeFiles\EarthDefense.dir\CloudObject.cpp.obj: CXX_COMPILER__EarthDefense_Debug ..\..\..\CloudObject.cpp || cmake_object_order_depends_target_EarthDefense_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
-  OBJECT_DIR = CMakeFiles\EarthDefense.dir
-  OBJECT_FILE_DIR = CMakeFiles\EarthDefense.dir
-  TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
-  TARGET_PDB = EarthDefense.pdb
-
-build CMakeFiles\EarthDefense.dir\BulletObject.cpp.obj: CXX_COMPILER__EarthDefense_Debug ..\..\..\BulletObject.cpp || cmake_object_order_depends_target_EarthDefense_Debug
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  INCLUDES = -I..\..\..\deps\glm -I..\..\..\deps\stb -I..\..\..\deps\glfw\include -I..\..\..\deps\glew\include
-  OBJECT_DIR = CMakeFiles\EarthDefense.dir
-  OBJECT_FILE_DIR = CMakeFiles\EarthDefense.dir
-  TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
-  TARGET_PDB = EarthDefense.pdb
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target EarthDefense
-
-
-#############################################
-# Link the executable EarthDefense.exe
-
-build EarthDefense.exe: CXX_EXECUTABLE_LINKER__EarthDefense_Debug CMakeFiles\EarthDefense.dir\main.cpp.obj CMakeFiles\EarthDefense.dir\ResourceManager.cpp.obj CMakeFiles\EarthDefense.dir\Texture2D.cpp.obj CMakeFiles\EarthDefense.dir\Shader.cpp.obj CMakeFiles\EarthDefense.dir\BackgroundObject.cpp.obj CMakeFiles\EarthDefense.dir\GameObject.cpp.obj CMakeFiles\EarthDefense.dir\SpriteRenderer.cpp.obj CMakeFiles\EarthDefense.dir\Game.cpp.obj CMakeFiles\EarthDefense.dir\PlayerObject.cpp.obj CMakeFiles\EarthDefense.dir\EnemyObject.cpp.obj CMakeFiles\EarthDefense.dir\CloudObject.cpp.obj CMakeFiles\EarthDefense.dir\BulletObject.cpp.obj
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = glfw3.lib  glew32.lib  opengl32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  LINK_PATH = -LIBPATH:D:\dev\NyanCatGame\deps\glfw\lib-vc2019   -LIBPATH:D:\dev\NyanCatGame\deps\glew\lib\Release\x64
-  OBJECT_DIR = CMakeFiles\EarthDefense.dir
-  POST_BUILD = cmd.exe /C "cd /D "D:\dev\NyanCatGame\out\build\x64-Debug (padrão)" && powershell -noprofile -executionpolicy Bypass -file D:/dev/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/EarthDefense.exe" -installedDir D:/dev/vcpkg/installed/x64-windows/debug/bin -OutVariable out && cd /D "D:\dev\NyanCatGame\out\build\x64-Debug (padrão)" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/dev/NyanCatGame/deps/glew/bin/Release/x64/glew32.dll "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/glew32.dll" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E create_symlink D:/dev/NyanCatGame/shaders "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/shaders" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E create_symlink D:/dev/NyanCatGame/textures "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)/textures""
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\EarthDefense.dir\
-  TARGET_FILE = EarthDefense.exe
-  TARGET_IMPLIB = EarthDefense.lib
-  TARGET_PDB = EarthDefense.pdb
-
-
-#############################################
-# Utility command for edit_cache
-
-build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "D:\dev\NyanCatGame\out\build\x64-Debug (padrão)" && "D:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
-  DESC = No interactive CMake dialog available...
-  restat = 1
-
-build edit_cache: phony CMakeFiles\edit_cache.util
-
-# =============================================================================
 # Target aliases.
 
-build EarthDefense: phony EarthDefense.exe
+build NyanCatGame: phony NyanCatGame.exe
 
 # =============================================================================
 # Folder targets.
@@ -196,7 +196,7 @@ build EarthDefense: phony EarthDefense.exe
 #############################################
 # Folder: D:/dev/NyanCatGame/out/build/x64-Debug (padrão)
 
-build all: phony EarthDefense.exe
+build all: phony NyanCatGame.exe
 
 # =============================================================================
 # Built-in targets

@@ -78,8 +78,8 @@ void Game::Init()
 
 	ResourceManager::LoadTexture("textures/star.png", GL_TRUE, "star");
 
-	Shader Shader = ResourceManager::GetShader("sprite");
-	Renderer = new SpriteRenderer(Shader);
+	Shader shader = ResourceManager::GetShader("sprite");
+	Renderer = new SpriteRenderer(shader);
 
 	BackgroundPosition = glm::vec2(0, 0);
 	Background = new BackgroundObject(BackgroundPosition, glm::vec2(1280, this->Height), ResourceManager::GetTexture("background"));
@@ -210,8 +210,8 @@ void Game::ProcessInput(GLfloat dt)
 
 void Game::Render()
 {
-	Shader Shader = ResourceManager::GetShader("sprite");
-	RendererPlayer = new SpriteRenderer(Shader, ((int) Player->SpriteCount) * 0.2f, ((int) Player->SpriteCount) * 0.2f + 0.2f);
+	Shader shader = ResourceManager::GetShader("sprite");
+	RendererPlayer = new SpriteRenderer(shader, ((int) Player->SpriteCount) * 0.2f, ((int) Player->SpriteCount) * 0.2f + 0.2f);
 
 	Background->Draw(*Renderer, 0.1f);
 	Background2->Draw(*Renderer, 0.1f);

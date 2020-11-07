@@ -695,7 +695,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "EarthDefense"
+			"value" : "NyanCatGame"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER",
@@ -1055,6 +1055,30 @@
 		},
 		{
 			"name" : "EarthDefense_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/dev/NyanCatGame"
+		},
+		{
+			"name" : "NyanCatGame_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/dev/NyanCatGame/out/build/x64-Debug (padrão)"
+		},
+		{
+			"name" : "NyanCatGame_SOURCE_DIR",
 			"properties" : 
 			[
 				{

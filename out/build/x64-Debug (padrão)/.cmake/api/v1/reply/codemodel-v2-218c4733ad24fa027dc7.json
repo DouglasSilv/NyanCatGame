@@ -26,7 +26,7 @@
 					[
 						0
 					],
-					"name" : "EarthDefense",
+					"name" : "NyanCatGame",
 					"targetIndexes" : 
 					[
 						0
@@ -37,9 +37,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "EarthDefense::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-EarthDefense-Debug-bee89cd66f2852c67606.json",
-					"name" : "EarthDefense",
+					"id" : "NyanCatGame::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NyanCatGame-Debug-19e73cf99edea7a07176.json",
+					"name" : "NyanCatGame",
 					"projectIndex" : 0
 				}
 			]
